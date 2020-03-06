@@ -292,8 +292,8 @@ class Invitation(AccessControlledModel):
                     email=coordinator["email"]
                 ) if "email" in coordinator else "email address unavailable"
             ) if isinstance(coordinator, dict) else "",
-            coordinators="<h3>Users who can change this applet's settings, "
-                "but not who can access your data: </h3>{}"
+            coordinators="<h3>Who can change this applet's settings, "
+                "but cannot see your data or enable others to see your data: </h3>{}"
                 "".format(
                     coordinators if len(
                         coordinators
@@ -308,13 +308,12 @@ class Invitation(AccessControlledModel):
             instanceName=" on {}".format(
                 instanceName
             ) if instanceName is not None and len(instanceName) else "",
-            managers="<h3>Users who can change this applet's settings, "
-                " including who can access your data: </h3>{}"
+            managers="<h3>Who can change this applet's settings, "
+                "and can invite anyone to see your data: </h3>{}"
                 "".format(
                     managers if len(managers) else "<ul><li>None</li></ul>"
                 ),
-            reviewers="<h3>Users who can see your data for this "
-                "applet: </h3>{}"
+            reviewers="<h3>Who can see your data for this applet: </h3>{}"
                 "".format(
                     reviewers if len(reviewers) else "<ul><li>None</li></ul>"
                 ),
