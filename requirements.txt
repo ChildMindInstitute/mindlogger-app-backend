@@ -45,7 +45,7 @@ pytest-cov==2.7.1
 python-dateutil==2.6.1
 pytz==2019.2
 pyfcm==1.4.7
-PyYAML==5.1.2
+PyYAML==5.4
 qrcode==6.1
 requests==2.22.0
 s3transfer==0.2.1
