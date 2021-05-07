@@ -616,7 +616,7 @@ def updateContributions(protocol, document, user):
     # remove contribution info for deleted items
     for itemId in removedItems:
         item = ScreenModel().findOne({
-            'meta.itemId': ObjectId(item),
+            'meta.itemId': ObjectId(itemId),
             'folderId': contributionFolder['_id']
         })
         if item:
